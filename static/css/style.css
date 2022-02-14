@@ -433,6 +433,15 @@ kbd {
     font-size: 100%;
     font-weight: 700; }
 
+    #download{
+      color: #235789 !important;
+      border: 1px solid #235789 !important; 
+    }
+    #download:hover{
+      color: white !important;
+      background-color: #235789 !important;
+    }
+    
 pre {
   display: block;
   font-size: 87.5%;
