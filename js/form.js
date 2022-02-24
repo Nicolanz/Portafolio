@@ -30,9 +30,10 @@ if (typeof(Storage) !== 'undefined') {
             user.message = message;
 
             sessionStorage.setItem('user', JSON.stringify(user));
-            sendEmail(user);
+            emailjs.send('service_9n4249o', "template_r5xicbi", user).then(function(res){
+                console.log("Success", res.status);
+            });
             displayMessage(user);
-
         });
     }
 } else {
@@ -55,9 +56,9 @@ function getUser () {
 // function to show message after sending email and hide form
 function displayMessage(user){
     const location = document.location.href;
-    const str = location.slice(-9);
+    const str = location.slice(-14);
 
-    if (str !== "translate"){
+    if (str !== "translate.html"){
         $("#messageDiv").append(`Thanks ${user.name}, I'll contact you`);
     } else {
         $("#messageDiv").append(`Gracias ${user.name}. Me pondre en contacto contigo`);
@@ -68,21 +69,4 @@ function displayMessage(user){
     $("#fill").css("display", "none");
 }
 
-// Function to send emails
-function sendEmail(user){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "zarateguarinnicolasandres@gmail.com",
-        Password : "cfvoldjobsqgkrpb",
-        To : 'zarateguarinnicolasandres@gmail.com',
-        From : "zarateguarinnicolasandres@gmail.com",
-        Subject : `${user.name} te envio un Email`,
-        Body : `Nombre: ${user.name} <br />
-                Correo: ${user.email} <br />
-                Asunto: ${user.subject} <br />
-                Mensaje: ${user.message} <br />
-                `
-    }).then((comentario) => {
-        console.log(comentario);
-    })
-}
+
