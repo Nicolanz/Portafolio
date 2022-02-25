@@ -8537,7 +8537,7 @@ h1, h2, h3, h4, h5,
                 max-width: 60%;
                 padding-left: 45px;
                 padding-right: 3em; } }
-        .owl-carousel.home-slider .slider-item .slider-text .subheading {
+        .owl-carousel.home-slider .slider-item .slider-text .subheading, .subheading {
           color: #000000;
           font-weight: 600;
           font-size: 14px;
@@ -8547,20 +8547,20 @@ h1, h2, h3, h4, h5,
         .owl-carousel.home-slider .slider-item .slider-text .text {
           position: relative;
           z-index: 1; }
-        .owl-carousel.home-slider .slider-item .slider-text h1 {
+        .owl-carousel.home-slider .slider-item .slider-text h1, .one-heading {
           font-size: 55px;
           color: #000000;
           line-height: 1.2;
           font-weight: 800; }
-          .owl-carousel.home-slider .slider-item .slider-text h1 span {
+          .owl-carousel.home-slider .slider-item .slider-text h1 span, .one-heading span {
             font-weight: 800;
             color: #2F97C1; }
           @media (max-width: 991.98px) {
-            .owl-carousel.home-slider .slider-item .slider-text h1 {
+            .owl-carousel.home-slider .slider-item .slider-text h1, .one-heading {
               color: #fff;
               font-size: 50px; } }
           @media (max-width: 767.98px) {
-            .owl-carousel.home-slider .slider-item .slider-text h1 {
+            .owl-carousel.home-slider .slider-item .slider-text h1, .one-heading {
               font-size: 40px; } }
         .owl-carousel.home-slider .slider-item .slider-text h2 {
           font-size: 30px;

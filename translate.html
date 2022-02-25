@@ -37,7 +37,7 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
+				<ul class="navbar-nav nav ml-auto d-lg-flex flex-lg-nowrap">
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Inicio</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>Perfil</span></a></li>
 					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Habilidades</span></a></li>
@@ -53,7 +53,7 @@
 
 	<!-- home & welcome section -->
 	<section id="home-section" class="hero">
-		<div class="home-slider owl-carousel" id="carrusel">
+		<div class="home-slider owl-carousel d-none d-md-block" id="carrusel">
 			<div class="slider-item">
 				<div class="overlay"></div>
 				<div class="px-md-0">
@@ -64,7 +64,7 @@
 						</div>
 						<div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
-								<span class="subheading" style="color: #235789;">Hola! Mi nombre es nicolas</span>
+								<span class="subheading" style="color: #235789;">Hola! Mi nombre es Nicolas</span>
 								<h1 class="mb-4 mt-3" style="color: #000;" >Diseñador <span style="color: #235789;">UI/UX</span> de Interfaces Web</h1>
 								<p id="ftco-nav""><a href="#contact-section" class="btn btn-primary" style="border: 1px solid #235789 !important; background-color: #235789;" >Contratame</a> <a href="./hojadevida-med.pdf" download="hojadevida.pdf" download id="download" class=" btn btn-primary btn-outline-primary">Descarga mi Hoja de Vida</a></p>
 							</div>
@@ -91,6 +91,42 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div id="demo" class="carousel slide d-block d-md-none" data-ride="carousel" id="carrusel">
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+			</ul>
+			<div class="carousel-inner">
+				<div class="carousel-item active position-relative">
+					<div class="position-absolute d-flex align-items-center justify-content-center border ftco-animate col-12 " style="z-index: 2; height: 650px;">
+						<div class="text slider-text col-12 d-flex flex-column flex-wrap align-items-center ">
+							<span class="subheading text-center" style="color: #235789;">Hola! Mi nombre es Nicolas</span>
+							<h1 class="mb-4 mt-3 one-heading font-weight-bold text-center" style="color: #000;" >Diseñador <span style="color: #235789;">UI/UX</span> de Interfaces Web</h1>
+							<p id="ftco-nav""><a href="#contact-section" class="btn btn-primary" style="border: 1px solid #235789 !important; background-color: #235789;" >Contratame</a> <a href="./hojadevida-med.pdf" download="hojadevida.pdf" download id="download" class=" btn btn-primary btn-outline-primary">Descarga mi Hoja de Vida</a></p>
+						</div>
+					</div>
+					<div class="img position-relative" style="background: url(images/my-images/background.jpg); background-size: cover; opacity:0.5; height: 650px;"></div>
+				</div>
+
+				<div class="carousel-item position-relative">
+					<div class="position-absolute d-flex align-items-center justify-content-center border ftco-animate col-12 " style="z-index: 2; height: 650px;">
+						<div class="text slider-text col-12 d-flex flex-column flex-wrap align-items-center ">
+							<span class="subheading text-center" style="color: #235789;">Construyo &amp; diseño sistemas funcionales</span>
+							<h1 class="mb-4 mt-3 one-heading font-weight-bold text-center" style="color: #000;" >Hola, Soy <span style="color: #235789;">Nicolas</span> Bienvenido a mi Portafolio</h1>
+							<p id="ftco-nav""><a href="#contact-section" class="btn btn-primary" style="border: 1px solid #235789 !important; background-color: #235789;" >Contratame</a> <a href="./hojadevida-med.pdf" download="hojadevida.pdf" download id="download" class=" btn btn-primary btn-outline-primary">Descarga mi Hoja de Vida</a></p>
+						</div>
+					</div>
+					<div class="img position-relative" style="background: url(images/my-images/work.jpg); background-size: cover; opacity:0.5; height: 650px;"></div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" style="z-index: 4" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" style="z-index: 4" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
 		</div>
 	</section>
 
@@ -176,8 +212,8 @@
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Nombre:</span> <span>Nicolas Zarate</span></li>
 									<li class="d-flex"><span>Nacimiento:</span> <span>Febrero 08, 1999</span></li>
-									<li class="d-flex"><span>Direccion:</span> <span>Medellin, Transv 79c 85-30</span></li>
-									<li class="d-flex"><span>Codigo postal:</span> <span>050036</span></li>
+									<!-- <li class="d-flex"><span>Direccion:</span> <span>Medellin, Transv 79c 85-30</span></li> -->
+									<!-- <li class="d-flex"><span>Codigo postal:</span> <span>050036</span></li> -->
 									<li class="d-flex"><span>Telefono:</span>
 										<span>+57 (319) 267 1867
 										</span>
@@ -1054,7 +1090,7 @@
 		<script type="text/javascript">
 			$(window).bind("resize", function () {
 				console.log($(this).width())
-				if ($(this).width() < 720) {
+				if ($(this).width() >= 768 && $(this).width() <= 992) {
 					$('#carrusel').addClass('container-fluid');
 				} else {
 					$('#carrusel').removeClass('container-fluid');

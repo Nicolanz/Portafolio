@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Nicolas Zarate | Portafolio</title>
+	<title>Nicolas Zarate | Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -37,7 +37,7 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
+				<ul class="navbar-nav nav ml-auto d-lg-flex flex-lg-nowrap">
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
@@ -53,7 +53,7 @@
 
 	<!-- home & welcome section -->
 	<section id="home-section" class="hero">
-		<div class="home-slider owl-carousel" id="carrusel">
+		<div class="home-slider owl-carousel d-none d-md-block" id="carrusel">
 			<div class="slider-item">
 				<div class="overlay"></div>
 				<div class="px-md-0">
@@ -84,7 +84,7 @@
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
 								<span class="subheading" style="color: #235789;">I build &amp; design functional systems</span>
-								<h1 class="mb-4 mt-3" style="color: #000;">Hi, I am <span style="color: #235789;">Nicolas</span> Welcome my Portafolio Site</h1>
+								<h1 class="mb-4 mt-3" style="color: #000;">Hi, I am <span style="color: #235789;">Nicolas</span> Welcome my Portfolio Site</h1>
 								<p id="ftco-nav" ><a href="#contact-section" class="btn btn-primary" style="border: 1px solid #235789 !important; background-color: #235789;">Hire me</a> <a href="./nicolaszarate-cv.pdf" download="cv.pdf" download id="download" class="btn btn-primary btn-outline-primary">Download CV</a></p>
 							</div>
 						</div>
@@ -92,6 +92,43 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="demo" class="carousel slide d-block d-md-none" data-ride="carousel" id="carrusel">
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+			</ul>
+			<div class="carousel-inner">
+				<div class="carousel-item active position-relative">
+					<div class="position-absolute d-flex align-items-center justify-content-center border ftco-animate col-12 " style="z-index: 2; height: 650px;">
+						<div class="text slider-text col-12 d-flex flex-column flex-wrap align-items-center ">
+							<span class="subheading text-center" style="color: #235789;">Hello! This is Nicolas </span>
+							<h1 class="mb-4 mt-3 one-heading font-weight-bold text-center" style="color: #000;" >Innovative <span style="color: #235789;">UI/UX</span> Web Developer</h1>
+							<p id="ftco-nav""><a href="#contact-section" class="btn btn-primary" style="border: 1px solid #235789 !important; background-color: #235789;" >Hire me</a> <a href="./nicolaszarate-cv.pdf" download="cv.pdf" download id="download" class=" btn btn-primary btn-outline-primary">Download CV</a></p>
+						</div>
+					</div>
+					<div class="img position-relative" style="background: url(images/my-images/background.jpg); background-size: cover; opacity:0.5; height: 650px;"></div>
+				</div>
+
+				<div class="carousel-item position-relative">
+					<div class="position-absolute d-flex align-items-center justify-content-center border ftco-animate col-12 " style="z-index: 2; height: 650px;">
+						<div class="text slider-text col-12 d-flex flex-column flex-wrap align-items-center ">
+							<span class="subheading text-center" style="color: #235789;">I build &amp; design functional systems</span>
+							<h1 class="mb-4 mt-3 one-heading font-weight-bold text-center" style="color: #000;" >Hi, I am <span style="color: #235789;">Nicolas</span> Welcome my Portfolio Site</h1>
+							<p id="ftco-nav""><a href="#contact-section" class="btn btn-primary" style="border: 1px solid #235789 !important; background-color: #235789;" >Hire me</a> <a href="./nicolaszarate-cv.pdf" download="cv.pdf" download id="download" class=" btn btn-primary btn-outline-primary">Download CV</a></p>
+						</div>
+					</div>
+					<div class="img position-relative" style="background: url(images/my-images/work.jpg); background-size: cover; opacity:0.5; height: 650px;"></div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" style="z-index: 4" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" style="z-index: 4" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
 	</section>
 
 	<!-- ability counter section -->
@@ -175,8 +212,8 @@
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Name:</span> <span>Nicolas Zarate</span></li>
 									<li class="d-flex"><span>Date of birth:</span> <span>February 08, 1999</span></li>
-									<li class="d-flex"><span>Address:</span> <span>Medellin, Transv 79c 85-30</span></li>
-									<li class="d-flex"><span>Zip code:</span> <span>050036</span></li>
+									<!-- <li class="d-flex"><span>Address:</span> <span>Medellin, Transv 79c 85-30</span></li> -->
+									<!-- <li class="d-flex"><span>Zip code:</span> <span>050036</span></li> -->
 									<li class="d-flex"><span>Phone:</span>
 										<span>+57 (319) 267 1867
 										</span>
@@ -1051,7 +1088,7 @@
 		<script type="text/javascript">
 			$(window).bind("resize", function () {
 				console.log($(this).width())
-				if ($(this).width() < 720) {
+				if ($(this).width() >= 768 && $(this).width() <= 992) {
 					$('#carrusel').addClass('container-fluid');
 				} else {
 					$('#carrusel').removeClass('container-fluid');
