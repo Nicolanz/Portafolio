@@ -40,10 +40,17 @@ if (typeof(Storage) !== 'undefined') {
                 displayMessage(user);
             }
             else {
-                $("#status").append("Acepta el captcha primero");
+                const location = document.location.href;
+                const str = location.slice(-14);
+                let msg;
+
+                if (str !== "translate.html"){
+                    msg = "Accept captcha verification"
+                } else {
+                    msg = "Acepta el captcha primero";
+                }
+                $("#status").append(msg);
             }
-
-
 
         });
     }

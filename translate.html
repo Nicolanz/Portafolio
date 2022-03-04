@@ -24,6 +24,8 @@
 	<script src="../resources/assets/js/smoothproducts.min.js"></script>
 	<script src="../resources/assets/js/theme.js"></script>
 
+	<!-- reCAPTCHA script -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function() {
@@ -981,7 +983,10 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="submit" value="Enviar mensaje" class="btn btn-primary py-3 px-5">
+									<div class="g-recaptcha mt-2" data-sitekey="6Lcs5LQeAAAAAMnXW-q3AMg25YjGg9bdwtfogGK4"></div>
+									<div id="status"></div>
+									<br/>
+									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
 								</div>
 							</div>
 						</div>
