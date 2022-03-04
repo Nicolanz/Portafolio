@@ -29,11 +29,22 @@ if (typeof(Storage) !== 'undefined') {
             user.subject = subject;
             user.message = message;
 
-            sessionStorage.setItem('user', JSON.stringify(user));
-            emailjs.send('service_9n4249o', "template_r5xicbi", user).then(function(res){
-                console.log("Success", res.status);
-            });
-            displayMessage(user);
+            const res = grecaptcha.getResponse();
+
+            if (res.length != 0){
+                $("#status").css("display", "none")
+                sessionStorage.setItem('user', JSON.stringify(user));
+                emailjs.send('service_9n4249o', "template_r5xicbi", user).then(function(res){
+                    console.log("Success", res.status);
+                });
+                displayMessage(user);
+            }
+            else {
+                $("#status").append("Acepta el captcha primero");
+            }
+
+
+
         });
     }
 } else {
